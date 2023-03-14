@@ -27,16 +27,15 @@ galleryRef.onclick = (e) => {
   const origImageSrc = e.target.dataset.source;
   const origImageMarkup = `<img src='${origImageSrc}' style="width: 1400px; height: 900px;">`;
 
-  const modalWithOrigImage = basicLightbox.create(origImageMarkup, {
-    onShow: () => document.addEventListener("keydown", onEscapeClick),
-  });
-
   const onEscapeClick = ({ code }) => {
     if (code === "Escape") {
       modalWithOrigImage.close();
-      document.removeEventListener("keydown", onEscapeClick);
     }
   };
+  const modalWithOrigImage = basicLightbox.create(origImageMarkup, {
+    onShow: () => document.addEventListener("keydown", onEscapeClick),
+    onClose: () => document.removeEventListener("keydown", onEscapeClick),
+  });
   
   modalWithOrigImage.show();
 };
