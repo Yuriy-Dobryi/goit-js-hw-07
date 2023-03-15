@@ -29,7 +29,7 @@ const galeryBox = new SimpleLightbox(".gallery a",
 );
 galeryBox.on("closed.simplelightbox", () =>
   alert(`Thank you very much for your review, Evgenia
-  I really want to hear your voice`)
+  我真的很想听到你的聲音`)
 );
 
 
