@@ -1,8 +1,10 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-const galleryRef = document.querySelector('.gallery');
-const galleryMarkup = galleryItems.map(({ preview, original, description }) => `
+const galleryRef = document.querySelector(".gallery");
+const galleryMarkup = galleryItems
+  .map(
+    ({ preview, original, description }) => `
 <div class="gallery__item">
   <a class="gallery__link" href="${original}">
     <img
@@ -13,7 +15,9 @@ const galleryMarkup = galleryItems.map(({ preview, original, description }) => `
     />
   </a>
 </div>
-`).join('');
+`
+)
+  .join("");
 
 galleryRef.insertAdjacentHTML("beforeend", galleryMarkup);
 
