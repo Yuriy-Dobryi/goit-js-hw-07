@@ -21,7 +21,7 @@ const galleryMarkup = galleryItems
 
 galleryRef.insertAdjacentHTML("beforeend", galleryMarkup);
 
-// onclick - встроєний метод бібліотеки basicLightbox
+// onclick - встроєна властивість в JS, яка при наступному записі буде перезаписувати першу (краще використовувати addEventListener)
 galleryRef.onclick = (e) => {
   if (e.target.nodeName !== "IMG") {
     return;

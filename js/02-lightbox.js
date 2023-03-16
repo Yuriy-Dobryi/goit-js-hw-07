@@ -27,13 +27,3 @@ const galeryBox = new SimpleLightbox(".gallery a",
   disableRightClick: true,
   }
 );
-galeryBox.on("closed.simplelightbox", () =>
-  alert(`Thank you very much for your review, Evgenia
-  我真的很想听到你的聲音`)
-);
-
-
-galleryRef.insertAdjacentHTML(
-  "beforebegin",
-  "<a target='_blank' style='color: red;' href='https://www.youtube.com/watch?v=Ryfm-7ZrL-Y'>Як обіцяв - трек, який мені дуже зайшов на українській (в лс, потім удалю)</a>"
-);
